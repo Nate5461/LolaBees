@@ -13,18 +13,15 @@
     src: url('The Brooklyn.otf');
 }
 
-#home {
+body {
+    margin: 0%;
+    padding: 0%;
     background-attachment: top;
     background-repeat: no-repeat;
     background: linear-gradient(to right, #161616 10%, #f7dc0e 10% 90%, #161616 90% 100%);
     width: 100%;
     height: 100vh;
     padding-top: 65px;
-}
-
-body {
-    margin: 0%;
-    padding: 0%;
 }
 
 nav {
@@ -35,6 +32,13 @@ nav {
     background-color: rgb(255, 255, 255, 0.0);
 }
 
+#myChart{
+    margin: 10vw;
+    background-color: rgb(255, 255, 255, 0.7);
+    margin-top: 1%;
+
+
+}
 nav ul {
     list-style-type: none;
     display: flex;
