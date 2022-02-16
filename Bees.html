@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
 </head>
 
@@ -23,7 +24,26 @@
     <div id=home>
         </div>
        
+        <div class="container">
+            <canvas id="myChart"></canvas>
+        </div>
 
+        <script>
+            let myChart = document.getElementById('myChart').getContext('2d');
+            let massPopChart = new Chart(myChart, {
+                type: 'line' ,
+                data:{
+                    labels: ['time'],
+                    datasets: [{
+                        label: 'weight',
+                        data:[
+                            20, 30, 40, 50
+                        ]
+                    }]
+                },
+                options:{}
+            });
+        </script>
     
 
  
