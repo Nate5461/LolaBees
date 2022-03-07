@@ -64,6 +64,10 @@ nav a {
     
 
 }
+.dropdown:hover {
+    colour: rgba(0,0,0,0.49);
+
+}
 
 .label {
     float: left;
