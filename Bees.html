@@ -9,41 +9,21 @@
 
 <body>
 
-    <div id="titlebar">
-
-        <nav>
-            <ul>
-                <li><a href="Bees.html">Lola Bees Monitoring</a></li>
-                <li>
-                    <div class="label">Home</div>
-                </li>
-            </ul>
-        </nav>
+  <div class="navbar">
+        <a href="#Contact">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Hives
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Hive 1.html">Hive 1</a>
+        <a href="#">Hive 2</a>
+        <a href="#">Hive 3</a>
+      </div>
     </div>
+    <a href="Bees.html">Home</a>
+  </div>
 
-    <div id=home>
-        </div>
-       
-        <div class="container">
-            <canvas id="myChart"></canvas>
-        </div>
+ <title>Lola Bees Monitoring</title>
 
-        <script>
-            let myChart = document.getElementById('myChart').getContext('2d');
-            let massPopChart = new Chart(myChart, {
-                type: 'line' ,
-                data:{
-                    labels: ['Day'],
-                    datasets: [{
-                        label: 'weight',
-                        data:[{x:'2016-12-25', y:20}, {x:'2016-12-26', y:10}
-                        ]
-                    }]
-                },
-                options:{}
-            });
-        </script>
-    
-
- 
 </body>
