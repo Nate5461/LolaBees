@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
 </head>
 
@@ -28,9 +26,29 @@
         </div>
     </div>
 
-    <img src="BeePhoto1.jpeg" width="500vw" height="350vh" float="right" class="image-1">
-    <img src="BeePhoto2.jpeg" width="500vw" height="350vh" float="left" class="image-2">
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+        let massPopChart = new Chart(myChart, {
+            type: 'line',
+            data: {
+                labels: ['Day'],
+                datasets: [{
+                    label: 'weight',
+                    data: [{
+                        x: '2016-12-25',
+                        y: 20
+                    }, {
+                        x: '2016-12-26',
+                        y: 10
+                    }]
+                }]
+            },
+            options: {}
+        });
+    </script>
 
 </body>
-
-</html>

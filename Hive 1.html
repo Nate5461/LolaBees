@@ -5,52 +5,59 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-<head>    
 
-<body>
-	  <div class="navbar">
-        <a href="#Contact">Contact</a>
-    <div class="dropdown">
-      <button class="dropbtn">Hives
+    <head>
+
+        <body>
+            <div class="navbar">
+                <a href="Help.html">Help</a>
+                <a href="Contact.html">Contact</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Hives
         <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content">
-        <a href="Hive 1.html">Hive 1</a>
-        <a href="#">Hive 2</a>
-        <a href="#">Hive 3</a>
-      </div>
-    </div>
-    <a href="Bees.html">Home</a>
-        <div class="top-right">
-    <a href='https://www.lolabees.ca/'><button class="image-3" type="logo"> <img src="LolaBeesLogo.png" height ="40" width="30" /></button></a>
-    </div>
-  </div>
-	 <div id=home>
+                    <div class="dropdown-content">
+                        <a href="Hive 1.html">Hive 1</a>
+                        <a href="Hive 2.html">Hive 2</a>
+                        <a href="Hive 3.html">Hive 3</a>
+                    </div>
+                </div>
+                <a href="index.html">Home</a>
+                <div id=home>
+                </div>
 
-        </div>
-
-       
-        <div class="container">
-            <canvas id="myChart"></canvas>
-        </div>
-
-        <script>
-            let myChart = document.getElementById('myChart').getContext('2d');
-            let massPopChart = new Chart(myChart, {
-                type: 'line' ,
-                data:{
-                    labels: ['Day'],
-                    datasets: [{
-                        label: 'weight',
-                        data:[{x:'2016-12-25', y:20}, {x:'2016-12-26', y:10}
-                        ]
-                    }]
-                },
-                options:{}
-            });
-        </script>
-    
+                <div class="top-right">
+                    <a href='https://www.lolabees.ca/'><button class="image-3" type="logo"> <img src="LolaBeesLogo.png" height ="40" width="30" /></button></a>
+                </div>
+            </div>
 
 
+            <div class="container">
+                <canvas id="myChart"></canvas>
+            </div>
 
-</body>
+            <script>
+                let myChart = document.getElementById('myChart').getContext('2d');
+                let massPopChart = new Chart(myChart, {
+                    type: 'line',
+                    data: {
+                        labels: ['Day'],
+                        datasets: [{
+                            label: 'weight',
+                            data: [{
+                                x: '2016-12-25',
+                                y: 20
+                            }, {
+                                x: '2016-12-26',
+                                y: 10
+                            }]
+                        }]
+                    },
+                    options: {}
+                });
+            </script>
+
+
+
+
+        </body>
