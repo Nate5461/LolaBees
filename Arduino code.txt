@@ -1,0 +1,84 @@
+#include <SoftwareSerial.h>
+
+String apn="internet";
+
+//APN
+
+String apn_u = "";
+
+//APN-Username
+
+String apn_p = "";
+
+//APN-Password
+
+String url="https://lolahives.com//get_method.php"; //URL of Server
+
+SoftwareSerial SWserial (8, 7); // sim8001 TX pin, sim8001 RX_pin
+
+int counter = 0;
+
+void setup()
+{
+
+Serial.begin(9600);
+
+Serial.println("SIM800 AT CMD Test");
+
+SWserial.begin(9600);
+
+delay (15000);
+
+while (SWserial.available()) { 
+    Serial.write (SWserial.read());
+}
+
+delay (2000);
+gsm_config_gprs ();
+}
+
+
+void loop() {
+
+counter++;
+
+String data = String (counter); //write your data here
+
+gsm_http_post (data);
+
+delay (2000);
+}
+
+void gsm http_post(String postdata) {
+
+String sendURL = url+"?val-"+postdata;
+
+Serial.println(" --- Start GPRS & HTTP --- ");
+
+gsm_send_serial ("AT+SAPBR-1, 1");
+
+gsm_send_serial ("AT+SAPBR=2,1");
+
+gsm_send_serial ("AT+HTTPINIT");
+
+gsm_send_serial ("AT+HTTPPARA-CID, 1");
+
+gsm_send_serial ("AT+HTTPPARA-URL," + sendURL);
+
+gsm_send_serial ("AT+HTTPPARA-CONTENT, application/x-www-form-urlencoded");
+
+gsm_send_serial ("AT+HTTPDATA-192, 5000"); 39 gsm_send_serial (postdata);
+
+gsm_send_serial ("AT+HTTPACTION=1");
+
+gsm_send_serial ("AT+HTTPREAD");
+
+gsm_send_serial ("AT+HTTPTERM");
+
+gsm_send_serial ("AT+SAPBR=0,1");
+}
+
+void gsm_config_aprs() {
+Serial.println(" --- CONFIG GPRS --- ");
+gsm_send_serial("AT+SAPBR=3,1,Contype,GPRS");
+gsm_send_serial("AT+SAPBR=3,1,APN," + apn);
