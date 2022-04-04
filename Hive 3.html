@@ -26,28 +26,12 @@
         </div>
     </div>
 
-    <div class="container">
-        <canvas id="myChart"></canvas>
+
+    <div id="chart-container3">
+        <canvas id="myChart3" style="background-color: #ebf4f5;"></canvas>></canvas>
     </div>
 
-    <script>
-        let myChart = document.getElementById('myChart').getContext('2d');
-        let massPopChart = new Chart(myChart, {
-            type: 'line',
-            data: {
-                labels: ['Day'],
-                datasets: [{
-                    label: 'weight',
-                    data: [{
-                        x: '2016-12-25',
-                        y: 20
-                    }, {
-                        x: '2016-12-26',
-                        y: 10
-                    }]
-                }]
-            },
-            options: {}
-        });
-    </script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/chart.min.js"></script>
+    <script type="text/javascript" src="js/apph.js"></script>
 </body>

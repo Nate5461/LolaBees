@@ -28,6 +28,7 @@ body {
     width: 100%;
     height: 100vh;
 }
+
 .title {
     color: #828282;
     font-family: inherit;
@@ -35,7 +36,6 @@ body {
     padding-left: 75px;
     font-style: inherit;
     font-size: 50px;
-
 }
 
 .image-1 {
@@ -56,14 +56,32 @@ body {
     border-width: 0;
 }
 
+.H1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: inherit;
+}
+
 #myChart {
     margin: 9.9vw;
-    background-color: white;
     margin-top: 1%;
+    background-color: #ebf4f5;
+}
+
+#myChart2 {
+    margin: 9.9vw;
+    margin-top: 1%;
+    background-color: #ebf4f5;
+}
+
+#myChart3 {
+    margin: 9.9vw;
+    margin-top: 1%;
+    background-color: #ebf4f5;
 }
 
 .dropdown:hover {
-    colour: rgba(0, 0, 0, 0.49);
+    color: rgba(0, 0, 0, 0.49);
 }
 
 .label {
